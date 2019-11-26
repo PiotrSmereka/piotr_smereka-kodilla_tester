@@ -1,12 +1,12 @@
 import java.util.Objects;
 
 public class Notebook {
-    String weight;
+    int weight;
     int price;
     int year;
 
 
-    public Notebook(String weight, int price, int year) {
+    public Notebook(int weight, int price, int year) {
         this.weight = weight;
         this.price = price;
         this.year = year;
@@ -23,9 +23,9 @@ public class Notebook {
     }
 
     public void checkWeight() {
-        if (this.weight == "700g" || this.weight == "600g") {
+        if (this.weight <= 700) {
             System.out.println("This notebook is very light.");
-        } else if (this.weight == "1200g") {
+        } else if (this.weight <=1200) {
             System.out.println("The notebook is not too heavy");
         } else {
             System.out.println("This notebook is very heavy.");
