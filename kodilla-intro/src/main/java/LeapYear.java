@@ -19,12 +19,12 @@ public class LeapYear {
     }
 
     public static boolean isLeapYear(int yearInsideMethod) {
-        if ((yearInsideMethod % 4 == 0 && yearInsideMethod % 100 !=0) || yearInsideMethod %400==0) {
-            System.out.println("Rok" + " " + yearInsideMethod + " " +"jest przestępny");
+        if ((yearInsideMethod % 4 == 0 && yearInsideMethod % 100 != 0) || yearInsideMethod % 400 == 0) {
+            System.out.println("Rok" + " " + yearInsideMethod + " " + "jest przestępny");
             return true;
         }
-            System.out.println("Rok" + " "+ yearInsideMethod +  " " + "nie jest przestępny");
-            return false;
+        System.out.println("Rok" + " " + yearInsideMethod + " " + "nie jest przestępny");
+        return false;
 
     }
 }

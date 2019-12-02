@@ -1,12 +1,12 @@
 import java.util.Objects;
 
 public class Notebook {
-    String weight;
+    int weight;
     int price;
     int year;
 
 
-    public Notebook(String weight, int price, int year) {
+    public Notebook(int weight, int price, int year) {
         this.weight = weight;
         this.price = price;
         this.year = year;
@@ -21,7 +21,7 @@ public class Notebook {
             System.out.println("This notebook is expensive.");
         }
     }
-    public String getWeight(){
+    public int getWeight(){
         return this.weight;
     }
 
