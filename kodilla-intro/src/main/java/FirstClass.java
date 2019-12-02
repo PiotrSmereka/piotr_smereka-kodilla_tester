@@ -33,9 +33,9 @@ public class FirstClass {
         System.out.println(main.sumNumbers(numbers));
 
 
-        RandomNumbers countOfRandomNumbersNumbers = new RandomNumbers();
-        int max = 6;
-        System.out.println(countOfRandomNumbersNumbers.getCountOfRandomNumber(max));
+        RandomNumbers countOfRandomNumbers = new RandomNumbers();
+        int max = 12;
+        System.out.println(countOfRandomNumbers.getCountOfRandomNumber(max));
 
 
 
