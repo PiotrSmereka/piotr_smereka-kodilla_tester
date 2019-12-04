@@ -7,7 +7,7 @@ public class FirstClass {
         notebook.checkYearPrice();
 
         int notebookWeight = notebook.getWeight();
-        System.out.println(notebookWeight +'g');
+        System.out.println(notebookWeight + 'g');
 
 
         Notebook heavyNotebook = new Notebook(2000, 1500, 2011);
@@ -16,7 +16,7 @@ public class FirstClass {
         heavyNotebook.checkYearPrice();
 
         int heavyNotebookWeight = heavyNotebook.getWeight();
-        System.out.println(heavyNotebookWeight+'g');
+        System.out.println(heavyNotebookWeight + 'g');
 
 
         Notebook oldNotebook = new Notebook(1200, 600, 2003);
@@ -26,16 +26,12 @@ public class FirstClass {
 
 
         int oldNotebookWeight = oldNotebook.getWeight();
-        System.out.println(oldNotebookWeight+'g');
+        System.out.println(oldNotebookWeight + 'g');
 
         Sum main = new Sum();
-        int[] numbers = new int [] {1,2,3,4,5};
+        int[] numbers = new int[]{1, 2, 3, 4, 5};
         System.out.println(main.sumNumbers(numbers));
 
-
-        RandomNumbers countOfRandomNumbers = new RandomNumbers();
-        int max = 12;
-        System.out.println(countOfRandomNumbers.getCountOfRandomNumber(max));
 
 
 
