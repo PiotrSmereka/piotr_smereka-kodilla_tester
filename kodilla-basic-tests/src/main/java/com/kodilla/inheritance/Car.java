@@ -6,7 +6,6 @@ public class Car {
     public void turnOnLights(){
         System.out.println("Lights were turned on");
     }
-
 }
 
 

@@ -8,4 +8,3 @@ package com.kodilla.inheritance;
             System.out.println("Closing roof...");
         }
 }
-
