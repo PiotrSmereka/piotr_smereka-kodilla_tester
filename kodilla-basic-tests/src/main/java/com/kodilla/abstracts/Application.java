@@ -8,10 +8,8 @@ public class Application {
         AnimalProcessor processor = new AnimalProcessor();
         processor.process(dog);
 
-
         Duck duck = new Duck();
         duck.getVoice();
         processor.process(duck);
-
     }
 }

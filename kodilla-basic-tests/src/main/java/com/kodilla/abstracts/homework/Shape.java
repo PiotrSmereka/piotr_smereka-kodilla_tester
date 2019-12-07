@@ -1,39 +1,35 @@
 package com.kodilla.abstracts.homework;
 
 public abstract class Shape {
-    private float circleRadius;
-    private float rectangleLength;
-    private float rectangleWidth;
-    private float triangleSideA;
-    private float triangleSideB;
-    private float triangleSideC;
+    private double radius;
+    private double sideA;
+    private double sideB;
+    private double sideC;
 
-    public Shape (float circleRadius, float rectangleLength, float rectangleWidth, float triangleSideA, float triangleSideB, float triangleSideC){
-        this.circleRadius = circleRadius;
-        this.rectangleLength = rectangleLength;
-        this.rectangleWidth = rectangleWidth;
-        this.triangleSideA = triangleSideA;
-        this.triangleSideB = triangleSideB;
-        this.triangleSideC = triangleSideC;
+    public Shape (double radius) {
+        this.radius = radius;
     }
-    public float getCircleRadius() {
-        return circleRadius;
+     public Shape (double sideA, double sideB){
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
-    public float getRectangleLength() {
-        return rectangleLength;
+    public Shape (double sideA, double sideB, double sideC){
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC ;
     }
-    public float getRectangleWidth() {
-        return rectangleWidth;
+    public double getRadius() {
+        return radius;
     }
-    public float getTriangleSideA() {
-        return triangleSideA;
+    public double getSideA() {
+        return sideA;
     }
-    public float getTriangleSideB() {
-        return triangleSideB;
+    public double getSideB() {
+        return sideB;
     }
-    public float getTriangleSideC() {
-        return triangleSideC;
+    public double getSideC() {
+        return sideC;
     }
-    public abstract void perimeter();
-    public abstract void area();
+    public abstract void calculationOfPerimeter();
+    public abstract void calculationOfArea();
 }
