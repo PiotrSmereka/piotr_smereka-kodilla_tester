@@ -28,6 +28,4 @@ public class Application {
             System.out.println("Metoda podnosząca liczbę do kwadratu nie działa poprawnie dla liczby " + c);;
         }
     }
-
-
 }
