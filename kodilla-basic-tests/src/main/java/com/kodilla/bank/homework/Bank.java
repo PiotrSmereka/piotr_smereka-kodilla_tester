@@ -2,16 +2,11 @@ package com.kodilla.bank.homework;
 
 public class Bank {
     private CashMachine[] cashMachines;
-
     public Bank() {
-
-
             CashMachine cashMachine = new CashMachine();
             CashMachine cashMachine2 = new CashMachine();
-
             this.cashMachines= new CashMachine[]{cashMachine,cashMachine2};
         }
-
         public int getTotalBalance () {
         if (cashMachines.length == 0){
             return 0;
@@ -22,15 +17,16 @@ public class Bank {
         }
         return total;
     }
-
     public CashMachine[] getCashMachines(){
         return cashMachines;
-    }public double getNumberOfOutcomeOperations(){
+    }
+    public double getNumberOfOutcomeOperations(){
         CashMachine cashMachine=new CashMachine();
-        if(cashMachine.getTransactions().length==0){
-            return 0;
-        }
-        double outcome=0;
+
+       if (cashMachine.getTransactions().length==0){
+           return 0;
+       }
+       double outcome =0;
         int i;
         for(i=0;i<cashMachine.getTransactions().length; i++){
             if(cashMachine.getTransactions()[i]<0) {
