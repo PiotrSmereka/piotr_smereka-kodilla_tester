@@ -24,6 +24,7 @@ public class ShapeApplication {
         double a = random.nextDouble() * 100 + 1;      // possible values: 1.000 - 100.999
         double b = random.nextDouble() * 100 + 1;
         double c = random.nextDouble() * 100 + 1;
+
         if (drawnShapeKind == 0)
             return new Circle(a);
         else if (drawnShapeKind == 1)
