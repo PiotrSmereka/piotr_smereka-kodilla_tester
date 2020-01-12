@@ -24,8 +24,7 @@ public class Bank {
         return cashMachines;
     }
 
-    public int getNumberOfOutcomeOperations() {
-        CashMachine cashMachine = new CashMachine();
+    public int getNumberOfOutcomeOperations(CashMachine cashMachine) {
         if (cashMachines.length == 0) {
             return 0;
         }
@@ -38,46 +37,48 @@ public class Bank {
         return outcome;
     }
 
-    public int getNumberOfIncomeOperations(){
-        CashMachine cashMachine=new CashMachine();
-        if (cashMachine.getTransactions().length==0){
+    public int getNumberOfIncomeOperations(CashMachine cashMachine){
+
+        if (cashMachines.length==0){
             return 0;
         }
         int income =0;
-        for(int i=0;i<cashMachine.getTransactions().length; i++){
-            if(cashMachine.getTransactions()[i]>0) {
-                    income += cashMachine.getTransactions()[i];
+        for(int i=0;i<cashMachines.length; i++){
+            if(cashMachines[i].getTransactions()[i]>0) {
+                    income += cashMachines[i].getTransactions()[i];
                 }
         }
         return income;
     }
 
-    public double getAverageOfOutcome(){
-        CashMachine cashMachine=new CashMachine();
-        if(cashMachine.getTransactions().length==0){
+    public double getAverageOfOutcome(CashMachine cashMachine){
+        if(cashMachines.length==0){
             return 0;
         }
         double outcome=0;
-        for(int i=0;i<cashMachine.getTransactions().length; i++){
-            if(cashMachine.getTransactions()[i]<0) {
-                outcome += cashMachine.getTransactions()[i];
+        int n = 1;
+        for(int i=0;i<cashMachines.length; i++){
+            if(cashMachines[i].getTransactions()[i]<0) {
+                outcome += cashMachines[i].getTransactions()[i];
+                n = cashMachines[i].getTransactions()[i];
             }
         }
-        return outcome/cashMachine.getTransactions().length;
+        return outcome/n;
     }
 
-    public double getAverageOfIncome(){
-        CashMachine cashMachine=new CashMachine();
-        if(cashMachine.getTransactions().length==0){
+    public double getAverageOfIncome(CashMachine cashMachine){
+        if(cashMachines.length==0){
             return 0;
         }
         double income=0;
-        for(int i=0;i<cashMachine.getTransactions().length; i++){
-            if(cashMachine.getTransactions()[i]>0) {
-                income += cashMachine.getTransactions()[i];
+        int n =1;
+        for(int i=0;i<cashMachines.length; i++){
+            if(cashMachines[i].getTransactions()[i]>0) {
+                income += cashMachines[i].getTransactions()[i];
+                n = cashMachines[i].getTransactions()[i];
             }
         }
-        return income/cashMachine.getTransactions().length;
+        return income/n;
     }
 }
 
