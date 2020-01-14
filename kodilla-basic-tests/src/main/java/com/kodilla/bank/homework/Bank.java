@@ -30,8 +30,8 @@ public class Bank {
         }
         int outcome = 0;
         for (int i = 0; i < cashMachines.length; i++) {
-            if (cashMachines[i].getTransactions()[i]< 0) {
-                outcome += cashMachines[i].getTransactions()[i];
+            if (cashMachine.getTransactions()[i]< 0) {
+                outcome += cashMachine.getTransactions()[i];
             }
         }
         return outcome;
@@ -44,8 +44,8 @@ public class Bank {
         }
         int income =0;
         for(int i=0;i<cashMachines.length; i++){
-            if(cashMachines[i].getTransactions()[i]>0) {
-                    income += cashMachines[i].getTransactions()[i];
+            if(cashMachine.getTransactions()[i]>0) {
+                    income += cashMachine.getTransactions()[i];
                 }
         }
         return income;

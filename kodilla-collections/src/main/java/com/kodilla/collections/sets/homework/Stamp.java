@@ -14,15 +14,19 @@ public class Stamp {
         this.stampWidth = stampWidth;
         this.stamped = stamped;
     }
+
     public String getStampName() {
         return stampName;
     }
+
     public double getStampHeight() {
         return stampHeight;
     }
+
     public double getStampWidth() {
         return stampWidth;
     }
+
     public boolean isStamped() {
         return stamped;
     }

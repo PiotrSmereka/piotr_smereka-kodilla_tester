@@ -8,16 +8,17 @@ import java.util.Objects;
 public class School {
    private String schoolName;
 
-    private List<Double> pupilsInClass = new ArrayList<>();
+    private List<Integer> pupilsInClass = new ArrayList<>();
 
-    public School (String schoolName, double ... pupilsInClass) {
-        for (double pupils : pupilsInClass)
+    public School (String schoolName, int ... pupilsInClass) {
+        for (int pupils : pupilsInClass)
             this.pupilsInClass.add(pupils);
             this.schoolName = schoolName;
     }
-    public double getAllPupils() {
-        double sum =0.0;
-        for (double pupils : pupilsInClass)
+
+    public int getAllPupils() {
+        int sum =0;
+        for (int pupils : pupilsInClass)
             sum += pupils;
         return sum;
     }
@@ -40,7 +41,7 @@ public class School {
         return schoolName;
     }
 
-    public List<Double> getPupilsInClass() {
+    public List<Integer> getPupilsInClass() {
         return pupilsInClass;
     }
 
