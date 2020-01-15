@@ -9,12 +9,12 @@ public class BookManager {
         return new Book(title, author);
     }
 
-    public Book addBook() {
+    public Book addBook()
         Set<Book> library = new HashSet<>();
         library.add(new Book("Cars", "P. Newman"));
         library.add(new Book("My Home", "R. Norris"));
         library.add(new Book("New history", "T. Mal"));
         library.add(new Book("New history", "T. Mal"));
-    }
+
 
 }
