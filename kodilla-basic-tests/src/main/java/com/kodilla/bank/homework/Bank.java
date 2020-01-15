@@ -58,9 +58,9 @@ public class Bank {
         double outcome=0;
         int n = 1;
         for(int i=0;i<cashMachines.length; i++){
-            if(cashMachines[i].getTransactions()[i]<0) {
-                outcome += cashMachines[i].getTransactions()[i];
-                n = cashMachines[i].getTransactions()[i];
+            if(cashMachine.getTransactions()[i]<0) {
+                outcome += cashMachine.getTransactions()[i];
+                n = cashMachine.getTransactions()[i];
             }
         }
         return outcome/n;
@@ -73,9 +73,9 @@ public class Bank {
         double income=0;
         int n =1;
         for(int i=0;i<cashMachines.length; i++){
-            if(cashMachines[i].getTransactions()[i]>0) {
-                income += cashMachines[i].getTransactions()[i];
-                n = cashMachines[i].getTransactions()[i];
+            if(cashMachine.getTransactions()[i]>0) {
+                income += cashMachine.getTransactions()[i];
+                n = cashMachine.getTransactions()[i];
             }
         }
         return income/n;
