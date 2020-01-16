@@ -25,58 +25,67 @@ public class Bank {
     }
 
     public int getNumberOfOutcomeOperations(CashMachine cashMachine) {
-        if (cashMachines.length == 0) {
+        int [] transactions = cashMachine.getTransactions(); // wyciagnięcie transakcji z jednego bankomatu i przypisanie do zmiennej int [] transactions
+        if (transactions.length == 0) {
             return 0;
         }
-        int outcome = 0;
-        for (int i = 0; i < cashMachines.length; i++) {
-            if (cashMachine.getTransactions()[i]< 0) {
-                outcome += cashMachine.getTransactions()[i];
+        int n = 0;
+        for (int i = 0; i < transactions.length; i++) {
+            if (transactions[i]< 0) {
+                n++;
             }
         }
-        return outcome;
+        return n;
     }
 
     public int getNumberOfIncomeOperations(CashMachine cashMachine){
-
-        if (cashMachines.length==0){
+        int [] transactions = cashMachine.getTransactions(); // wyciagnięcie transakcji z jednego bankomatu i przypisanie do zmiennej int [] transactions
+        if (transactions.length == 0) {
             return 0;
         }
-        int income =0;
-        for(int i=0;i<cashMachines.length; i++){
-            if(cashMachine.getTransactions()[i]>0) {
-                    income += cashMachine.getTransactions()[i];
+        int n=0;
+        for(int i=0;i<transactions.length; i++){
+            if(transactions[i]>0) {
+                    n++;
                 }
         }
-        return income;
+        return n;
     }
 
     public double getAverageOfOutcome(CashMachine cashMachine){
-        if(cashMachines.length==0){
+        int [] transactions = cashMachine.getTransactions(); // wyciagnięcie transakcji z jednego bankomatu i przypisanie do zmiennej int [] transactions
+        if (transactions.length == 0) {
             return 0;
         }
-        double outcome=0;
-        int n = 1;
-        for(int i=0;i<cashMachines.length; i++){
-            if(cashMachine.getTransactions()[i]<0) {
-                outcome += cashMachine.getTransactions()[i];
-                n = cashMachine.getTransactions()[i];
+        double outcome = 0;
+        int n = 0;
+        for(int i=0;i<transactions.length; i++){
+            if(transactions[i]<0) {
+                outcome += transactions[i];
+                n++;
             }
+        }
+        if (n == 0){    //zapobieganie dzieleniu przez 0
+            return 0;
         }
         return outcome/n;
     }
 
     public double getAverageOfIncome(CashMachine cashMachine){
-        if(cashMachines.length==0){
+        int [] transactions = cashMachine.getTransactions(); // wyciagnięcie transakcji z jednego bankomatu i przypisanie do zmiennej int [] transactions
+        if (transactions.length == 0) {
             return 0;
         }
-        double income=0;
-        int n =1;
-        for(int i=0;i<cashMachines.length; i++){
-            if(cashMachine.getTransactions()[i]>0) {
-                income += cashMachine.getTransactions()[i];
-                n = cashMachine.getTransactions()[i];
+        double income = 0;
+        int n = 0;
+        for(int i=0;i<transactions.length; i++){
+            if(transactions[i]>0) {
+                income += transactions[i];
+                n++;
             }
+        }
+        if (n == 0){    //zapobieganie dzieleniu przez 0
+            return 0;
         }
         return income/n;
     }

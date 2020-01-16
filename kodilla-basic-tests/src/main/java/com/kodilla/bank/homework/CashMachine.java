@@ -8,6 +8,7 @@ public class CashMachine {
         this.currentValue = 0;
         this.transactions = new int[0];
     }
+
     public void add(int value) {
         this.currentValue++;
         int[] newTab = new int[this.currentValue];
@@ -15,9 +16,11 @@ public class CashMachine {
         newTab[this.currentValue - 1] = value;
         this.transactions = newTab;
     }
+
     public int[] getTransactions() {
         return transactions;
     }
+
     public int getBalance () {
         if (this.transactions.length == 0){
             return 0;
