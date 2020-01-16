@@ -12,6 +12,7 @@ public class BookApplication {
      Book book3 = bookManager.createBook("New history", "T. Mal");
      Book book4 = bookManager.createBook("New history", "T. Mal");
 
+
      System.out.println(book1.hashCode());
      System.out.println(book2.hashCode());
      System.out.println(book3.hashCode());
@@ -19,6 +20,7 @@ public class BookApplication {
      System.out.println("--------------");
 
      Set<Book> library = bookManager.getLibrary();
+     System.out.println(library.size());
      for (Book l: library){// wyciagniecie obiektow klasy Book z kolekcji i przypisanie do zmiennych l
           System.out.println(l.hashCode());
      }
