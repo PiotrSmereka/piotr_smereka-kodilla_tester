@@ -23,15 +23,23 @@ public class BankTestSuite {
         Bank bank = new Bank ();
         CashMachine[] tab = bank.getCashMachines();
         tab[0].add(-2);
-        assertEquals(-2,bank.getNumberOfOutcomeOperations(tab[0]));
+        tab[0].add(3);
+        tab[0].add(-5);
+        tab[0].add(-7);
+        tab[0].add(0);
+        assertEquals(3,bank.getNumberOfOutcomeOperations(tab[0]));
     }
 
     @Test
     public void shouldDisplayNumberOfIncomeOperations(){
         Bank bank = new Bank ();
         CashMachine[] tab = bank.getCashMachines();
-        tab[0].add(10);
-        assertEquals(10,bank.getNumberOfIncomeOperations(tab[0]));
+        tab[0].add(0);
+        tab[0].add(15);
+        tab[0].add(-2);
+        tab[0].add(3);
+        tab[0].add(1);
+        assertEquals(3,bank.getNumberOfIncomeOperations(tab[0]));
     }
 
     @Test
@@ -39,7 +47,10 @@ public class BankTestSuite {
         Bank bank = new Bank ();
         CashMachine[] tab = bank.getCashMachines();
         tab[0].add(-5);
-        assertEquals(-5,bank.getAverageOfOutcome(tab[0]));
+        tab[0].add(-6);
+        tab[0].add(2);
+        tab[0].add(0);
+        assertEquals(-5.5,bank.getAverageOfOutcome(tab[0]));
     }
 
     @Test
@@ -47,6 +58,9 @@ public class BankTestSuite {
         Bank bank = new Bank ();
         CashMachine[] tab = bank.getCashMachines();
         tab[0].add(10);
-        assertEquals(10,bank.getAverageOfIncome(tab[0]));
+        tab[0].add(-5);
+        tab[0].add(20);
+        tab[0].add(0);
+        assertEquals(15,bank.getAverageOfIncome(tab[0]));
     }
 }

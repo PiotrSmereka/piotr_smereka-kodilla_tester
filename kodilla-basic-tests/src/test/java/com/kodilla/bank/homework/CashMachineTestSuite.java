@@ -14,6 +14,7 @@ public class CashMachineTestSuite {
         int[] transactions = cashMachine.getTransactions();
         assertEquals(1, transactions[0]);
     }
+
     @Test
     public void shouldDisplayOutcome() {
         CashMachine cashMachine = new CashMachine();
@@ -21,6 +22,7 @@ public class CashMachineTestSuite {
         int[] transactions = cashMachine.getTransactions();
         assertEquals(-3, transactions[0]);
     }
+
     @Test
     public void shouldDisplayBalance() {
         CashMachine cashMachine = new CashMachine();
@@ -30,12 +32,14 @@ public class CashMachineTestSuite {
         int balance= cashMachine.getBalance();
         assertEquals(15, balance);
     }
+
     @Test
     public void shouldDisplayZeroTransactions() {
         CashMachine cashMachine = new CashMachine();
         int[] transactions = cashMachine.getTransactions();
         assertEquals(0, transactions.length);
     }
+
     @Test
     public void shouldDisplayNumberOfTransactions() {
         CashMachine cashMachine = new CashMachine();
@@ -45,6 +49,7 @@ public class CashMachineTestSuite {
         int[] transactions = cashMachine.getTransactions();
         assertEquals(3, transactions.length);
     }
+
     @Test
     public void shouldDisplayAllTransactionsInOrder() {
         CashMachine cashMachine = new CashMachine();

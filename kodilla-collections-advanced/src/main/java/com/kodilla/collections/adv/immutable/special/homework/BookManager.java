@@ -5,16 +5,13 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class BookManager {
+    private Set<Book> library = new HashSet<>();
     public Book createBook(String title, String author) {
-        return new Book(title, author);
+        Book book = new Book (title, author);
+        library.add(book);
+        return book;
     }
-
-    public Book addBook()
-        Set<Book> library = new HashSet<>();
-        library.add(new Book("Cars", "P. Newman"));
-        library.add(new Book("My Home", "R. Norris"));
-        library.add(new Book("New history", "T. Mal"));
-        library.add(new Book("New history", "T. Mal"));
-
-
+    public Set<Book> getLibrary(){
+        return library;
+    }
 }

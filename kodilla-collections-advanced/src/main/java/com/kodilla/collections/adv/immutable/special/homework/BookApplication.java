@@ -1,5 +1,7 @@
 package com.kodilla.collections.adv.immutable.special.homework;
 
+import java.util.Set;
+
 public class BookApplication {
 
     public static void main(String[] args) {
@@ -14,8 +16,11 @@ public class BookApplication {
      System.out.println(book2.hashCode());
      System.out.println(book3.hashCode());
      System.out.println(book4.hashCode());
+     System.out.println("--------------");
 
+     Set<Book> library = bookManager.getLibrary();
+     for (Book l: library){// wyciagniecie obiektow klasy Book z kolekcji i przypisanie do zmiennych l
+          System.out.println(l.hashCode());
+     }
     }
-
-
 }
