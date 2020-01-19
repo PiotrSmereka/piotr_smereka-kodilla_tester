@@ -1,8 +1,8 @@
 package com.kodilla.stream.optional.homework;
 
 public class Student {
-    String name;
-    Teacher teacher;
+    private String name;
+    private Teacher teacher;
 
 
     public Student(String name, Teacher teacher) {

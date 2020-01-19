@@ -1,7 +1,7 @@
 package com.kodilla.stream.optional.homework;
 
 public class Teacher {
-   private String name;
+    private String name;
 
     public String getName() {
         return name;
