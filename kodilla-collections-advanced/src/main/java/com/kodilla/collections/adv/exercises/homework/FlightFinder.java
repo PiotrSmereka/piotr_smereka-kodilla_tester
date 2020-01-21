@@ -5,6 +5,7 @@ import java.util.List;
 public class FlightFinder {
 
     public List<Flight> findFlightsFrom (String departure){
+
         return null;
     }
 
