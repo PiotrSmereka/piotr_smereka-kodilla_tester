@@ -11,8 +11,4 @@ public class Teacher {
         this.name = name;
     }
 
-    @Override
-    public String toString() {
-        return "Teacher :" + name;
-    }
 }
