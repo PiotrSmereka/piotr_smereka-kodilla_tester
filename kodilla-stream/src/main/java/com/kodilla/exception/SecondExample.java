@@ -1,4 +1,4 @@
-package com.kodilla.stream.exception;
+package com.kodilla.exception;
 
 public class SecondExample {
     public static void main(String[] args) {

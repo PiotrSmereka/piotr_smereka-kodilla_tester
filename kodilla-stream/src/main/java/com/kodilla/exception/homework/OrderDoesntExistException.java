@@ -1,4 +1,4 @@
-package com.kodilla.stream.exception.homework;
+package com.kodilla.exception.homework;
 
 public class OrderDoesntExistException extends Exception{
 }

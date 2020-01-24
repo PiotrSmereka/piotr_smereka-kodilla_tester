@@ -1,4 +1,4 @@
-package com.kodilla.stream.exception.homework;
+package com.kodilla.exception.homework;
 
 public class Order {
     private String number;

@@ -11,6 +11,6 @@ public class FlightRepository {
         flights.add(new Flight("From Berlin","To Moscow" ));
         flights.add(new Flight("From Berlin","To Frankfurt" ));
 
-        for (Flight flight : flights) System.out.println(flight);
+
     }
 }

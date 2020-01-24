@@ -1,4 +1,4 @@
-package com.kodilla.stream.exception;
+package com.kodilla.exception;
 
 import java.util.Scanner;
 
